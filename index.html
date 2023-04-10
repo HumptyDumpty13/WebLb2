@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korobieinikov Oleksandr</title>
+    <style>
+        body {
+            background-color: #a89f9f;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Лабораторна Робота 2 <br>
+            Коробєйніков Олександр КІУКІ-19-7<br> 
+            Варіант 6
+        </h1>
+        <form>
+            <h2>Заповніть дані про співробітників:</h2>
+            <label>Перший співробітник:</label><br>
+            <input type="text" id="surname1" placeholder="Прізвище" value="Korobieinikov">
+            <input type="date" id="date1" value="2020-04-10"><br><br>
+
+            <label>Другий співробітник:</label><br>
+            <input type="text" id="surname2" placeholder="Прізвище" value="Korobieinikov">
+            <input type="date" id="date2" value="2020-04-10"><br><br>
+
+            <label>Третій співробітник:</label><br>
+            <input type="text" id="surname3" placeholder="Прізвище" value="Korobieinikov">
+            <input type="date" id="date3" value="2020-04-10"><br><br>
+
+            <label>Четвертий співробітник:</label><br>
+            <input type="text" id="surname4" placeholder="Прізвище" value="Korobieinikov">
+            <input type="date" id="date4" value="2020-04-10"><br><br>
+
+            <label>П'ятий співробітник:</label><br>
+            <input type="text" id="surname5" placeholder="Прізвище" value="Korobieinikov">
+            <input type="date" id="date5" value="2020-04-10"><br><br>
+            <button type="button" onclick="calculate()">Розрахувати cередній стаж роботи</button>
+        </form>
+        <div id="result"></div>
+    </main>
+    <script>
+        function calculate() {
+            let surname1 = document.getElementById("surname1").value;
+            let date1 = new Date(document.getElementById("date1").value);
+            let surname2 = document.getElementById("surname2").value;
+            let date2 = new Date(document.getElementById("date2").value);
+            let surname3 = document.getElementById("surname3").value;
+            let date3 = new Date(document.getElementById("date3").value);
+            let surname4 = document.getElementById("surname4").value;
+            let date4 = new Date(document.getElementById("date4").value);
+            let surname5 = document.getElementById("surname5").value;
+            let date5 = new Date(document.getElementById("date5").value);
+            
+            let currentDate = new Date();
+            
+            if (date1 > currentDate || date2 > currentDate || date3 > currentDate || date4 > currentDate || date5 > currentDate) {
+            alert("Введіть коректну дату прийому на роботу.");
+            return;
+            }
+            
+            let years1 = (currentDate - date1) / (1000 * 60 * 60 * 24 * 365);
+            let years2 = (currentDate - date2) / (1000 * 60 * 60 * 24 * 365);
+            let years3 = (currentDate - date3) / (1000 * 60 * 60 * 24 * 365);
+            let years4 = (currentDate - date4) / (1000 * 60 * 60 * 24 * 365);
+            let years5 = (currentDate - date5) / (1000 * 60 * 60 * 24 * 365);
+            let averageYears = Math.floor((years1 + years2 + years3 + years4 + years5) / 5);
+            
+            let result = document.getElementById("result");
+            result.innerHTML = "Результат: " + averageYears + " років";
+        }
+    </script>
+</body>
+</html>
