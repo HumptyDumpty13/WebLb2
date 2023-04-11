@@ -1,4 +1,4 @@
-# Коробєйніков Олександр Борисович <br/> КІУКІ-19-7 <br/> Лабораторна робота №1 <br/> Варіант №6 <br/>
+# Коробєйніков Олександр Борисович <br/> КІУКІ-19-7 <br/> Лабораторна робота №2 <br/> Варіант №6 <br/>
 ## GitHub Pages: https://humptydumpty13.github.io/WebLb2/<br/>
 ## 1) Інтерфейс програми<br/>
 ![image](https://user-images.githubusercontent.com/53522039/230984207-817ed0f3-decf-441c-b72f-358c8b39cf2b.png)<br/>
